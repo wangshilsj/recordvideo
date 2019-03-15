@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$gradle.ext.supportLibraryVersion"
+    implementation "tv.danmaku.ijk.media:ijkplayer-java:$gradle.ext.ijkPlayerVersion"
+    //    compile "tv.danmaku.ijk.media:ijkplayer-armv7a:$rootProject.ijkPlayerVersion"
+    implementation "com.danikula:videocache:$gradle.ext.videocache"
+//    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
+}

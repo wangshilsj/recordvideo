@@ -1,0 +1,9 @@
+include ':app', ':demo', ':library'
+gradle.ext.ijkPlayerVersion = '0.8.8'
+gradle.ext.supportLibraryVersion = '26.1.0'  //以后会更新到新版
+gradle.ext.compileSdkVersion = 26
+gradle.ext.buildToolsVersion = "26.0.2"
+gradle.ext.minSdkVersion = 18
+gradle.ext.targetSdkVersion = 26
+gradle.ext.videocache = "2.7.0"
+

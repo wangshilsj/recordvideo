@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.2"
+    minSdkVersion = 14
+    targetSdkVersion = 22
+    supportVersion = "26.1.0"
+    picassoVersion = "2.4.0"
+    OKHTTP_VERISON = "3.10.0"
+    ijkPlayerVersion = "0.8"
+    videocache = "2.7.0"
+    PhotoView = "2.0.0"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
