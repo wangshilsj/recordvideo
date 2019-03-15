@@ -6,6 +6,7 @@ package com.heyhou.social.video;
 
 public interface AudioListener {
 
+
     void onProgress(String outputPath, int percentage);
     void onComplete(String outputPath, short[] resampleBuffer);
     void onError(String outputPath, String error);
