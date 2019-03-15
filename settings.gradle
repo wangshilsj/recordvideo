@@ -1,4 +1,4 @@
-include ':app', ':demo', ':library'
+include ':app'
 gradle.ext.ijkPlayerVersion = '0.8.8'
 gradle.ext.supportLibraryVersion = '26.1.0'  //以后会更新到新版
 gradle.ext.compileSdkVersion = 26

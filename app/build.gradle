@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
-def AAVersion = '4.4.0'
-def VRetrofit = '2.2.0'
+
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.wangshilsj'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -54,47 +55,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'appcompat-v7'
     }
 
-    implementation project(':library')
-    implementation project(':demo')
 
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
-    implementation "org.androidannotations:androidannotations-api:$AAVersion"
-    implementation 'org.greenrobot:eventbus:3.0.0'
-    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.OKHTTP_VERISON"
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-    implementation "com.squareup.retrofit2:retrofit:$VRetrofit"
-    implementation "com.squareup.retrofit2:converter-gson:$VRetrofit"
-    implementation "com.squareup.retrofit2:adapter-rxjava:$VRetrofit"
-    implementation 'io.reactivex:rxandroid:1.2.1'
-    implementation 'io.reactivex:rxjava:1.1.8'
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation'jp.wasabeef:glide-transformations:2.0.1'
-    implementation "com.android.support:design:$rootProject.ext.supportVersion"
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
-    implementation "com.github.chrisbanes:PhotoView:$rootProject.ext.PhotoView"
-    implementation 'in.srain.cube:ptr-load-more:1.0.6'
-    implementation 'com.tencent.bugly:crashreport:latest.release'
-    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
-    implementation 'com.kyleduo.switchbutton:library:2.0.0'
-    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
-    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
-    implementation 'com.github.FJ917:FJEditTextCount:v1.0.3'
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.27'
-    implementation files('libs/tentent.jar')
-    implementation 'fm.jiecao:jiecaovideoplayer:4.8.3'
-    implementation 'com.zhy:base-adapter:3.0.3'
-    implementation 'org.apache.commons:commons-lang3:3.6'
-    implementation 'com.malinskiy:superrecyclerview:1.1.4'
-    implementation 'com.github.chrisbanes:PhotoView:1.3.0'
-    implementation 'com.mikhaellopez:circularprogressbar:1.1.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.2.0'
-    implementation('com.github.bumptech.glide:okhttp3-integration:1.4.0') {
-        exclude group: 'glide-parent'
-    }
-    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
-    implementation 'id.zelory:compressor:2.1.0'
 
 }
